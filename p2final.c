@@ -43,3 +43,4 @@ int main()
   largest=Largest_fraction(f1,f2,f3);
   output(f1,f2,f3,largest);
   return 0;
+  }
