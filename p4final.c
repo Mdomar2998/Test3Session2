@@ -95,7 +95,7 @@ float evaluate(int n,float x,float a[])
     return result;
 }
 void output(int n,float x,float a[],float result)
-{
+ {
     for(int i=0;i<n;i++)
     {
       printf("%fx^%d+",a[i],i); 
