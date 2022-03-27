@@ -39,4 +39,5 @@ int main()
   add(a,b,c,d,&e,&f);
   output(a,b,c,d,e,f);
   return 0;
+
   }
