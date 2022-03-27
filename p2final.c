@@ -35,6 +35,7 @@ void output(Fraction f1,Fraction f2,Fraction f3,Fraction largest)
   printf("the largest of %d/%d , %d/%d and %d/%d is %d/%d",f1.num,f1.den,f2.num,f2.den,f3.num,f3.den,largest.num,largest.den);
 }
 int main()
+
 {
   Fraction f1,f2,f3,largest;
   f1=input_fraction();
