@@ -64,7 +64,7 @@ input_fraction () at p2final.c:7
 enter the fraction
 10    scanf("%d%d",&f.num,&f.den);
 (gdb) n
-1
+1`
 7
 11    return f;
 (gdb) n

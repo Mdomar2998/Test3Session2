@@ -1,1 +1,142 @@
+ gdb ./a.out
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>..
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from ./a.out...done.
+(gdb) b main
+Breakpoint 1 at 0x9c7: file p4final.c, line 107.
+(gdb) r
+Starting program: /home/runner/Test3Session2-1/a.out 
+warning: Error disabling address space randomization: Operation not permitted
 
+Breakpoint 1, main () at p4final.c:107
+107 {
+(gdb) s
+110     n=inputn();
+(gdb) s
+inputn () at p4final.c:48
+48  {
+(gdb) s
+50      printf("Enter the degree of the polynomial:");
+(gdb) n
+51      scanf("%d",&n);
+(gdb) n
+Enter the degree of the polynomial:1
+52      return n;
+(gdb) n
+53  }
+(gdb) n
+main () at p4final.c:111
+111     x=inputx();
+(gdb) s
+inputx () at p4final.c:55
+55  {
+(gdb) s
+57      printf("\nEnter the value of x:");
+(gdb) n
+
+58      scanf("%f",&x);
+(gdb) n
+Enter the value of x:1
+59      return x;
+(gdb) n
+60  }
+(gdb) n
+main () at p4final.c:112
+112     inputco(n,a);
+(gdb) s
+inputco (n=1, a=0x7ffca5c39f00) at p4final.c:63
+63      for(int i=0;i<=n;i++)
+(gdb) s
+65          printf("\nEnter the coefficients of the polynomial:");
+(gdb) n
+
+66          scanf("%f",&a[i]);
+(gdb) n
+Enter the coefficients of the polynomial:1
+63      for(int i=0;i<=n;i++)
+(gdb) n
+65          printf("\nEnter the coefficients of the polynomial:");
+(gdb) n
+
+66          scanf("%f",&a[i]);
+(gdb) n
+Enter the coefficients of the polynomial:1
+63      for(int i=0;i<=n;i++)
+(gdb) n
+68  }
+(gdb) n
+main () at p4final.c:113
+113     result=evaluate(n,x,a);
+(gdb) s
+evaluate (n=1, x=1, a=0x7ffca5c39f00) at p4final.c:71
+71      float result=0;int l=n;
+(gdb) n
+72      for(int i=0;i<=n;i++)
+(gdb) n
+74          float m=1;
+(gdb) n
+75        if(i==0)
+(gdb) n
+77          m=a[i];
+(gdb) n
+85        if(i==0)
+(gdb) n
+87        result=result+m;
+(gdb) n
+93        l--;
+(gdb) n
+72      for(int i=0;i<=n;i++)
+(gdb) n
+74          float m=1;
+(gdb) n
+75        if(i==0)
+(gdb) n
+80          for(int j=1;j<=i;j++)
+(gdb) n
+82              m=m*x;
+(gdb) n
+80          for(int j=1;j<=i;j++)
+(gdb) n
+85        if(i==0)
+(gdb) n
+91          result=result+(a[i]*m);
+(gdb) n
+93        l--;
+(gdb) n
+72      for(int i=0;i<=n;i++)
+(gdb) n
+95      return result;
+(gdb) n
+96  }
+(gdb) n
+main () at p4final.c:114
+114     output(n,x,a,result);
+(gdb) n
+1.000000x^0+1.000000x^1 at 1.000000 is2.000000
+115     return 0;
+(gdb) n
+116 }(gdb) continue
+Continuing.
+[Inferior 1 (process 544) exited normally]
+(gdb) p
+The history is empty.
+(gdb) l
+111     x=inputx();
+112     inputco(n,a);
+113     result=evaluate(n,x,a);
+114     output(n,x,a,result);
+115     return 0;
+116 }(gdb) Quit
+(gdb) 
