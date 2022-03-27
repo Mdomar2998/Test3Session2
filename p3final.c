@@ -88,4 +88,5 @@ int main()
   input_n_and_r(&n,&r);
   result=ncr(n,r);
   output(n,r,result);
-}
+
+  }
